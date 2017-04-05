@@ -5,61 +5,79 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta charset="utf-8">
 		<script type="text/javascript" src="js/javascript.js"></script>
+		<script type="text/javascript" src="jquery/jquery-3.2.0.js"></script>
 	</head>
 	<body>
-		<header>
-			<h1>CV de Sergio Luzón López</h1>
+		<header class="container top">
+			<h1>Sergio Luzón López</h1>
 		</header>
-		<nav class="container">
-			<ul class="fila">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var altura = $('.menu').offset().top;
+				$(window).on('scroll', function(){
+					if ( $(window).scrollTop() > altura ){
+						$('.menu').addClass('menu-fixed');
+					} else {
+						$('.menu').removeClass('menu-fixed');
+					}
+				});
+			});
+		</script>
+		<nav class="container nav">
+			<ul class="row menu caja">
 				<li onclick="letsScroll('datos')"><a href="javascript:;">Datos Personales</a></li>
 				<li onclick="letsScroll('estudios')"><a href="javascript:;">Estudios</a></li>
 				<li onclick="letsScroll('exp')"><a href="javascript:;">Experiencia</a></li>
-				<li onclick="letsScroll('otros')"><a href="javascript:;">Datos Personales</a></li>
+				<li onclick="letsScroll('sobre')"><a href="javascript:;">Sobre mi</a></li>
+				<li onclick="letsScroll('contacto')"><a href="javascript:;">Contacto</a></li>
 			</ul>
 		</nav>
 		<section class="container">
-			<article class="datos fila">
-				<div class="col6">
-					<h2>Datos Personales:</h2>
-					<br>
-					<p>Nombre: Sergio Luzón López</p>
-					<p>Teléfono: 625769825</p>
-					<p>e-mail: sergioluzon@gmail.com</p>
-					<p>03/12/1985</p>
+			<article class="datos row caja">
+				<div class="row">
+					<h2 class="col12">Datos Personales:</h2>
 				</div>
-				<div class="col6">
-					<img src="img/usuario.png" alt="Sergio Luzon Lopez">
+				<div class="row">
+					<div class="col6">
+						<p>Nombre: Sergio Luzón López</p>
+						<p>03/12/1985</p>
+					</div>
+					<div class="col6">
+						<img src="img/usuario.png" alt="Sergio Luzon Lopez">
+					</div>
 				</div>
 			</article>
-			<article class="estudios fila">
+			<article class="estudios row caja">
 				<div>
 					<h2>Estudios:</h2>
 					<br>
-					<p>
-						He estudiado Diseño de Aplicaciones Web en el I.E.S. La Aroboleda. El mimso centro donde realicé mis estudios de secundaria y bachillerato. También he completado varios curos de Doble Grado en Ingenieria Informática y de Software</p>
+					<p>He estudiado Diseño de Aplicaciones Web en el I.E.S. La Aroboleda. El mimso centro donde realicé mis estudios de secundaria y bachillerato. También he completado varios curos de Doble Grado en Ingenieria Informática y de Software</p>
 				</div>
 			</article>
-			<article class="exp fila">
+			<article class="exp row caja">
 				<div>
-					<h2>Estudios:</h2>
+					<h2>Experiencia:</h2>
 					<br>
-					<p>
-						He trabajado en el departamente de informática de Bank of America Merrill Lynch. Actualmente estoy desarrollando mis prácticas de Diseño de Aplicaciones Web  en Quality Solution Consulting. Antes de esto la mayor parte de mi experiencia laboral ha sido como comercial.
-					</p>
+					<p>He trabajado en el departamente de informática de Bank of America Merrill Lynch. Actualmente estoy desarrollando mis prácticas de Diseño de Aplicaciones Web  en Quality Solution Consulting. Antes de esto la mayor parte de mi experiencia laboral ha sido como comercial.</p>
 				</div>
 			</article>
-			<article class="otros fila">
+			<article class="sobre row caja">
 				<div>
-					<h2>Datos personales:</h2>
+					<h2>Sobre mi:</h2>
 					<br>
-					<p>
-						A pesar de haber estudiado informática, mi otra gran pasión es el deporte. Juego a baloncesto desde los 9 años y he probado multitud de otros deportes. También soy socorrista titulado.
-					</p>
+					<p>A pesar de haber estudiado informática, mi otra gran pasión es el deporte. Juego a baloncesto desde los 9 años y he probado multitud de otros deportes. También soy socorrista titulado.</p>
 				</div>
 			</article>
 		</section>
-		<footer>
+		<footer class="container">
+			<div class="row caja">
+				<div class="col6">
+					<p class="contacto">Mail: sergioluzon@gmail.com</p>
+				</div>
+				<div class="col6">
+					<p class="contacto">Teléfono: (+34) 625769825</p>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>

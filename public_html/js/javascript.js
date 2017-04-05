@@ -15,8 +15,13 @@ function letsScroll(op){
 		        behavior: 'smooth' 
 		    });
 		    break;
-		case 'otros':
-			document.querySelector('.otros').scrollIntoView({ 
+		case 'sobre':
+			document.querySelector('.sobre').scrollIntoView({ 
+		        behavior: 'smooth' 
+		    });
+		    break;
+		case 'contacto':
+			document.querySelector('.contacto').scrollIntoView({ 
 		        behavior: 'smooth' 
 		    });
 		    break;
